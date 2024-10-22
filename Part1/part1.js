@@ -42,7 +42,7 @@ for(let i = 0; i < array.length; i++){
 
 
 
-// What we did is change the 'var' function in the for loop to 'let'. the reason we do this is to
+// What I did is change the 'var' function in the for loop to 'let'. the reason we do this is to
 // fix a timing issue caused by the way var behaves in loops.
 // When you use var in a loop, it doesn’t remember the value of i for each step. All setTimeout functions
 // end up using the final value of i after the loop finishes.
