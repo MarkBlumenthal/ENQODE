@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main>
+      <v-container>
+        <!-- Use the ZeroTrustScoreWidget component and pass JSON data -->
+        <ZeroTrustScoreWidget :data="zeroTrustData" />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ZeroTrustScoreWidget from './components/ZeroTrustScoreWidget.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ZeroTrustScoreWidget,
+  },
+  data() {
+    return {
+      zeroTrustData: {
+        companyName: "FinTechSecure Ltd.",
+        ZeroTrustScore: 58.5,
+        metrics: {
+          "Firewall Score": 75,
+          "Encryption Score": 65,
+          "Access Control Score": 50,
+        },
+        observableData: {
+          averageShannonEntropyScore: 7.8,
+          firewallDetected: true,
+          DNSsecEnabled: true,
+          tlsVersion: "1.2",
+          certificateBitStrength: 2048,
+          securityHeadersImplemented: ["X-XSS-Protection", "X-Frame-Options"],
+          openPortsDetected: 12,
+        },
+        riskCategory: "Moderate Risk",
+      },
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
