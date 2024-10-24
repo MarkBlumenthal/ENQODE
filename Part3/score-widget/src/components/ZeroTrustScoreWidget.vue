@@ -3,31 +3,49 @@
     <!-- Company Name -->
     <v-row>
       <v-col>
-        <h2>{{ data.companyName }}</h2>
+        <h2>{{ zeroTrustData.companyName }}</h2>
       </v-col>
     </v-row>
 
-    <!-- Overall Zero-Trust Score -->
+    <!-- Overall Zero-Trust Score and Color Chart Side by Side -->
     <v-row>
-      <v-col>
-        <h3>Zero-Trust Score: {{ data.ZeroTrustScore }}</h3>
-        <!-- Manual Progress Bar for Zero-Trust Score -->
+      <!-- Progress Bars -->
+      <v-col cols="8">
+        <h3>Zero-Trust Score: {{ zeroTrustData.ZeroTrustScore }}</h3>
         <div 
           class="manual-progress-bar" 
-          :style="{ width: data.ZeroTrustScore + '%', height: '8px', backgroundColor: getBarColor(data.ZeroTrustScore) }">
+          :style="{ width: zeroTrustData.ZeroTrustScore + '%', height: '8px', backgroundColor: getBarColor(zeroTrustData.ZeroTrustScore) }">
         </div>
-      </v-col>
-    </v-row>
 
-    <!-- Individual Metrics -->
-    <v-row v-for="(value, key) in data.metrics" :key="key">
-      <v-col>
-        <p>{{ key }}: {{ value }}</p>
-        <!-- Manual Progress Bar for each metric -->
-        <div 
-          class="manual-progress-bar" 
-          :style="{ width: value + '%', height: '8px', backgroundColor: getBarColor(value) }">
-        </div>
+        <!-- Individual Metrics -->
+        <v-row v-for="(value, key) in zeroTrustData.metrics" :key="key">
+          <v-col>
+            <p>{{ key }}: {{ value }}</p>
+            <div 
+              class="manual-progress-bar" 
+              :style="{ width: value + '%', height: '8px', backgroundColor: getBarColor(value) }">
+            </div>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <!-- Color Legend Side by Side -->
+      <v-col cols="4">
+        <h3>Color Chart</h3>
+        <ul class="color-legend">
+          <li>
+            <span class="color-box" style="background-color: red;"></span>
+            Scores below 50 (Red)
+          </li>
+          <li>
+            <span class="color-box" style="background-color: yellow;"></span>
+            Scores between 50 and 70 (Yellow)
+          </li>
+          <li>
+            <span class="color-box" style="background-color: green;"></span>
+            Scores above 70 (Green)
+          </li>
+        </ul>
       </v-col>
     </v-row>
 
@@ -35,7 +53,7 @@
     <v-row>
       <v-col>
         <h3>Additional Observable Data</h3>
-        <div v-for="(value, key) in data.observableData" :key="key">
+        <div v-for="(value, key) in zeroTrustData.observableData" :key="key">
           <p>{{ key }}: {{ value }}</p>
         </div>
       </v-col>
@@ -45,7 +63,7 @@
     <v-row>
       <v-col>
         <v-alert :type="riskColor" outlined>
-          Risk Category: {{ data.riskCategory }}
+          Risk Category: {{ zeroTrustData.riskCategory }}
         </v-alert>
       </v-col>
     </v-row>
@@ -55,15 +73,32 @@
 <script>
 export default {
   name: "ZeroTrustScoreWidget",
-  props: {
-    data: {
-      type: Object,
-      required: true,
-    },
+  data() {
+    return {
+      zeroTrustData: {
+        companyName: "FinTechSecure Ltd.",
+        ZeroTrustScore: 58.5,
+        metrics: {
+          "Firewall Score": 75,
+          "Encryption Score": 65,
+          "Access Control Score": 50,
+        },
+        observableData: {
+          averageShannonEntropyScore: 7.8,
+          firewallDetected: true,
+          DNSsecEnabled: true,
+          tlsVersion: "1.2",
+          certificateBitStrength: 2048,
+          securityHeadersImplemented: ["X-XSS-Protection", "X-Frame-Options"],
+          openPortsDetected: 12,
+        },
+        riskCategory: "Moderate Risk",
+      },
+    };
   },
   computed: {
     riskColor() {
-      switch (this.data.riskCategory) {
+      switch (this.zeroTrustData.riskCategory) {
         case "Low Risk":
           return "success";
         case "Moderate Risk":
@@ -76,11 +111,10 @@ export default {
     },
   },
   methods: {
-    // Dynamically assign color based on value ranges
     getBarColor(value) {
-      if (value < 50) return 'red';   // Red for values below 50
-      if (value < 70) return 'yellow'; // Yellow for values between 50 and 70
-      return 'green';                 // Green for values 70 and above
+      if (value < 50) return 'red';
+      if (value < 70) return 'yellow';
+      return 'green';
     },
   },
 };
@@ -92,13 +126,29 @@ export default {
   background-color: green;
   transition: width 0.3s ease;
 }
-h2 {
-  margin-bottom: 20px;
+
+.color-legend {
+  list-style-type: none;
+  padding: 0;
 }
-v-alert {
-  margin-top: 20px;
+
+.color-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 1px solid #000;
 }
 </style>
+
+
+
 
 
 
