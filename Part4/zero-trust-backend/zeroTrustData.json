@@ -1,0 +1,14 @@
+[
+  {
+    "averageShannonShannonEntropyScore": 7.8,
+    "firewallDetected": true,
+    "DNSsecEnabled": true,
+    "tlsVersion": "1.2",
+    "certificateBitStrength": 2048,
+    "securityHeadersImplemented": [
+      "X-XSS-Protection",
+      "X-Frame-Options"
+    ],
+    "openPortsDetected": 12
+  }
+]
