@@ -1,27 +1,54 @@
-1) run this in the terminal: npm install -g @vue/cli
+# Zero-Trust Score Widget
 
-2) run this in the terminal: vue create score-widget
+## Overview
+This project demonstrates a simple Zero-Trust Score widget built using **Vue.js 3.x** and **Vuetify**. The widget displays:
+- The overall Zero-Trust Score.
+- Individual security metrics (e.g., Firewall Score, Encryption Score, Access Control Score).
+- A visual representation (progress bars) of each metric.
+- The risk category based on the Zero-Trust Score.
+- A color chart explaining what each bar color represents (e.g., red for low scores, green for high scores).
 
-3) Navigate to the project folder: cd score-widget
+## How to Run the Project
 
-4) Install Vuetify: vue add vuetify
-(Make sure to select the default preset in the setup
-Make sure to select Vuetify 3 - Vite (preview)
-DO NOT install  install Vuetify 3 nightly build)
+Follow these steps to set up and run the project:
 
-5)  Inside your src/components/ folder, create a new file named ZeroTrustScoreWidget.vue
+1. Clone this repository:
+  
+Navigate to the project folder:
 
-6) Open src/App.vue, and import the ZeroTrustScoreWidget component.
-Pass in the sample JSON structure as a prop.
-
-7) once all done run in terminal - npm run dev
-you should see the following in the terminal: > zero-trust-score-widget@0.1.0 dev
-> vite
+cd Part3
+cd score-widget
 
 
-  VITE v3.2.11  ready in 2638 ms
+Install the Vue CLI (if not already installed):
 
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
+npm install -g @vue/cli
+Install project dependencies:
 
-  8) copy http://localhost:5173/ into your browser and you should see the widget
+
+npm install
+Install Vuetify (if not already installed):
+
+
+vue add vuetify
+Select the default preset during setup.
+Choose Vuetify 3 - Vite (preview) (do not install the Vuetify 3 nightly build).
+Run the project:
+
+
+npm run dev
+Open your browser and navigate to the local development server:
+
+http://localhost:5173/
+Output
+Once the project is running, you should see a widget that displays the Zero-Trust Score and individual metrics with color-coded progress bars. The color chart next to the progress bars explains the meaning of each color:
+
+Red: Scores below 50.
+Yellow: Scores between 50 and 70.
+Green: Scores above 70.
+Screenshots
+
+Technologies Used
+Vue.js 3.x
+Vuetify (UI framework)
+Vite (for fast development)
