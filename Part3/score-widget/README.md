@@ -46,7 +46,8 @@ Once the project is running, you should see a widget that displays the Zero-Trus
 Red: Scores below 50.
 Yellow: Scores between 50 and 70.
 Green: Scores above 70.
-Screenshots
+
+See available Screenshots of what you should get
 
 Technologies Used
 Vue.js 3.x
