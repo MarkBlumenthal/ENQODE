@@ -11,8 +11,11 @@
     <v-row>
       <v-col>
         <h3>Zero-Trust Score: {{ data.ZeroTrustScore }}</h3>
-        <!-- Explicit inline style for color -->
-        <v-progress-linear :value="data.ZeroTrustScore" max="100" style="background-color: #E3F2FD;" bar-color="#1976D2" />
+        <!-- Manual Progress Bar for Zero-Trust Score -->
+        <div 
+          class="manual-progress-bar" 
+          :style="{ width: data.ZeroTrustScore + '%', height: '8px', backgroundColor: getBarColor(data.ZeroTrustScore) }">
+        </div>
       </v-col>
     </v-row>
 
@@ -20,12 +23,15 @@
     <v-row v-for="(value, key) in data.metrics" :key="key">
       <v-col>
         <p>{{ key }}: {{ value }}</p>
-        <!-- Explicit inline style for color -->
-        <v-progress-linear :value="value" max="100" style="background-color: #E8F5E9;" bar-color="#4CAF50" />
+        <!-- Manual Progress Bar for each metric -->
+        <div 
+          class="manual-progress-bar" 
+          :style="{ width: value + '%', height: '8px', backgroundColor: getBarColor(value) }">
+        </div>
       </v-col>
     </v-row>
 
-    <!-- Observable Data (optional display) -->
+    <!-- Observable Data -->
     <v-row>
       <v-col>
         <h3>Additional Observable Data</h3>
@@ -69,10 +75,23 @@ export default {
       }
     },
   },
+  methods: {
+    // Dynamically assign color based on value ranges
+    getBarColor(value) {
+      if (value < 50) return 'red';   // Red for values below 50
+      if (value < 70) return 'yellow'; // Yellow for values between 50 and 70
+      return 'green';                 // Green for values 70 and above
+    },
+  },
 };
 </script>
 
 <style scoped>
+.manual-progress-bar {
+  width: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
 h2 {
   margin-bottom: 20px;
 }
@@ -80,6 +99,20 @@ v-alert {
   margin-top: 20px;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
