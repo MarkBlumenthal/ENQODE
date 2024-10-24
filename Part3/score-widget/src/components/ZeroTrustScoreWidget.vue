@@ -81,7 +81,7 @@ export default {
         metrics: {
           "Firewall Score": 75,
           "Encryption Score": 65,
-          "Access Control Score": 50,
+          "Access Control Score": 35,
         },
         observableData: {
           averageShannonEntropyScore: 7.8,
