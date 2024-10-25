@@ -11,7 +11,7 @@ This is a backend service built using Node.js and Express to collect and store Z
 
 1. Clone the repository or download the project files:
 
-cd zero-trust-backend
+navigat to the folder - cd zero-trust-backend
 Install the necessary dependencies:
 
 npm install
