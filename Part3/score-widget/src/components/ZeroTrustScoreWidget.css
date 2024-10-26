@@ -3,6 +3,7 @@
     width: 0;
     background-color: green;
     transition: width 0.3s ease; /* Smooth transition of width over 0.3s */
+    border: 1px solid black;
   }
   
   /* CSS for the color legend section */
