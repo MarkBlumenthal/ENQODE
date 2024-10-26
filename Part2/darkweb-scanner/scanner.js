@@ -1,5 +1,4 @@
 // Import required libraries
-const axios = require('axios');
 const express = require('express');
 const { exec } = require('child_process');
 
@@ -33,7 +32,7 @@ function checkBreachCurl(identifier) {
 }
 
 /**
- * Example of using a command-line tool (e.g., nslookup) to get domain info.
+ * Example of using nslookup to get domain info.
  * @param {string} domain - The domain to check.
  * @returns {Promise<string>} - nslookup command result.
  */

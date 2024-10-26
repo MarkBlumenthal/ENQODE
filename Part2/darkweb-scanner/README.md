@@ -25,7 +25,7 @@ Initialize npm: Run the following command to create a package.json file for your
 npm init -y
 Install Dependencies: Install axios for making HTTP requests and express for setting up a server.
 
-npm install axios express
+npm install express
 
 Start the Server: Run the following command to start the API server on localhost:3000:
 
