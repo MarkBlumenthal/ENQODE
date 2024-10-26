@@ -16,11 +16,11 @@ This project is a Node.js-based API that uses the [LeakCheck Public API](https:/
 ## Installation
 
 1. **Clone this repository** to your local machine:
-   ```bash
+  
    git clone https://github.com/your-username/darkweb-scanner
-   cd darkweb-scanner
-Initialize npm: Run the following command to create a package.json file for your project.
+Navigate to: cd darkweb-scanner
 
+Initialize npm: Run the following command to create a package.json file for your project.
 
 npm init -y
 Install Dependencies: Install axios for making HTTP requests and express for setting up a server.
@@ -30,6 +30,7 @@ npm install axios express
 Start the Server: Run the following command to start the API server on localhost:3000:
 
 node scanner.js
+you should see in your terminal: Server running on http://localhost:3000
 
 Testing with Postman:
 
@@ -40,7 +41,7 @@ Value: the website you wish to check (e.g., example@example.com).
 Click Send to see the response.
 Example Response
 json
-Copy code
+
 {
     "success": true,
     "found": 3,
