@@ -20,11 +20,14 @@ Run the backend server:
 node index.js
 The server will start at http://localhost:3000.
 
-API Endpoints
+API Endpoints and testing in postman
 1. Submit Zero-Trust Score Data
 Endpoint: POST /submit
 Description: Submits a Zero-Trust Score entry and stores it in the backend (JSON file).
 Request Body (JSON):
+URL: http://localhost:3000/submit
+Post
+
 json
 Copy code
 {
@@ -45,6 +48,8 @@ Endpoint: GET /data
 Description: Retrieves all stored Zero-Trust Score entries.
 Response Body (JSON):
 json
+URL: http://localhost:3000/data
+GET
 Copy code
 [
   {
@@ -66,7 +71,7 @@ zero-trust-backend/
 ├── dataHandler.js     # Handles file storage and deduplication logic
 └── zeroTrustData.json # Data storage file (created after first POST request)
 Testing the API
-You can test the API using Postman or any HTTP client:
+You can test the API using Postman:
 
 POST /submit to submit Zero-Trust data.
 GET /data to retrieve stored Zero-Trust data.
