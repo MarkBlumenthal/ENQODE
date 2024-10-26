@@ -58,6 +58,29 @@ json
         { "name": "Fling.com", "date": "2011-03" }
     ]
 }
+
+
+
+Testing with nslookup with Postman:
+
+Open Postman and set up a GET request to http://localhost:3000/nslookup.
+Add a query parameter:
+Key: domain
+Value: the website you wish to check (e.g., example@example.com).
+Click Send to see the response.
+Example Response
+json
+
+<pre>
+Server:  8.8.8.8
+Address: 8.8.8.8#53
+
+Non-authoritative answer:
+Name:    google.com
+Address: 142.250.190.78
+</pre>
+
+
 Project Structure
 scanner.js: Main file containing API logic and Express server setup.
 README.md: Project documentation.
