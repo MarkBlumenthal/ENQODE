@@ -87,6 +87,9 @@
 </template>
 
 <script>
+
+import "./ZeroTrustScoreWidget.css";
+
 export default {
   name: "ZeroTrustScoreWidget",
   data() {
@@ -146,36 +149,7 @@ export default {
 };
 </script>
 
-<style scoped>
-/* CSS for the progress bar, with a transition to animate the width changes */
-.manual-progress-bar {
-  width: 0;
-  background-color: green;
-  transition: width 0.3s ease; /* Smooth transition of width over 0.3s */
-}
 
-/* CSS for the color legend section */
-.color-legend {
-  list-style-type: none; /* Removes bullet points from list */
-  padding: 0;
-}
-
-/* Each item in the legend has a small color box */
-.color-legend li {
-  display: flex;
-  align-items: center; /* Vertically aligns the color box and text */
-  margin-bottom: 8px; /* Adds some space between items */
-}
-
-/* The small color box to represent the score color */
-.color-box {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin-right: 8px; /* Space between the color box and the label */
-  border: 1px solid #000; /* Adds a border around the color box */
-}
-</style>
 
 
 
