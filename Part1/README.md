@@ -55,8 +55,7 @@ node part1.js
 Expected Output (Correct)
 After 5 seconds, you should see the correct output:
 
-arduino
-Copy code
+
 The element in position 0 is: 12
 The element in position 1 is: 10
 The element in position 2 is: 22
