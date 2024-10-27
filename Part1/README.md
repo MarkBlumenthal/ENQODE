@@ -22,8 +22,8 @@ for(var i = 0; i < array.length; i++){
 Step 2: Run the Code
 
 Run the JavaScript file using Node.js:
-
 node part1.js
+
 Expected Output (Incorrect)
 After 5 seconds, you should see the following incorrect output:
 
