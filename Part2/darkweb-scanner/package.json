@@ -1,7 +1,7 @@
 {
   "name": "darkweb-scanner",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is a Node.js-based API that uses the [LeakCheck Public API](https://wiki.leakcheck.io/en/api/public) to check for dark web data breaches related to a specified email or website. The API queries the LeakCheck database and returns structured information about where and when the data was found in breaches.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

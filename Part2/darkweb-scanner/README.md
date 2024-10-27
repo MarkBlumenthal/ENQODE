@@ -15,15 +15,12 @@ This project is a Node.js-based API that uses the [LeakCheck Public API](https:/
 
 ## Installation
 
-1. **Clone this repository** to your local machine:
-  
-   git clone https://github.com/your-username/darkweb-scanner
-Navigate to: cd darkweb-scanner
+1. Navigate to: cd Part2 and then cd darkweb-scanner
 
 Initialize npm: Run the following command to create a package.json file for your project.
 
 npm init -y
-Install Dependencies: Install axios for making HTTP requests and express for setting up a server.
+Install Dependencies:  express for setting up a server.
 
 npm install express
 
