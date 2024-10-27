@@ -12,9 +12,7 @@ This project demonstrates a simple Zero-Trust Score widget built using **Vue.js 
 
 Follow these steps to set up and run the project:
 
-1. Clone this repository:
-  
-Navigate to the project folder:
+1. Navigate to the project folder:
 
 cd Part3
 cd score-widget
