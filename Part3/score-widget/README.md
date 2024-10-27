@@ -17,24 +17,13 @@ Follow these steps to set up and run the project:
 cd Part3
 cd score-widget
 
-
-Install the Vue CLI (if not already installed):
-
-npm install -g @vue/cli
 Install project dependencies:
-
-
 npm install
-Install Vuetify (if not already installed):
 
 
-vue add vuetify
-Select the default preset during setup.
-Choose Vuetify 3 - Vite (preview) (do not install the Vuetify 3 nightly build).
 Run the project:
-
-
 npm run dev
+
 Open your browser and navigate to the local development server:
 
 http://localhost:5173/
