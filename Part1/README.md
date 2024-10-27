@@ -8,7 +8,7 @@ node -v
 npm -v
 If you don't have Node.js installed, download it from nodejs.org.
 
-Steps
+# Steps
 Navigate to the project directory using cd Enqode in the terminal and then cd Part1
 Make sure the following code is in part1.js:
 
@@ -46,10 +46,10 @@ for(let i = 0; i < array.length; i++){
     }, 5000);
 }
 
-Step 4: Run the Fixed Code
+# Step 4: Run the Fixed Code
 Run the file again using Node.js:
-
 node part1.js
+
 Expected Output (Correct)
 After 5 seconds, you should see the correct output:
 
