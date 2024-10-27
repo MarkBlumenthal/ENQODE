@@ -9,9 +9,8 @@ npm -v
 If you don't have Node.js installed, download it from nodejs.org.
 
 Steps
-Step 1: Create the JavaScript File
-Create a file called part1.js in your project folder.
-Copy the following code into part1.js:
+Navigate to the project directory using cd Enqode in the terminal and then cd Part1
+Make sure the following code is in part1.js:
 
 const array = [12, 10, 22, 5, 25];
 for(var i = 0; i < array.length; i++){
@@ -19,10 +18,9 @@ for(var i = 0; i < array.length; i++){
         console.log("The element in position " + i + " is: " + array[i]);
     }, 5000);
 }
-Step 2: Run the Code
-Open your terminal and navigate to the folder where part1.js is located. You can use the following command to change directories:
 
-cd path/to/your/folder
+Step 2: Run the Code
+
 Run the JavaScript file using Node.js:
 
 node part1.js
