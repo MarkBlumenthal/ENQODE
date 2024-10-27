@@ -36,6 +36,11 @@ Green: Scores above 70.
 
 See available Screenshots of what you should get
 
+
+# running the app/widget in play.vuetifyjs.com
+
+
+
 Technologies Used
 Vue.js 3.x
 Vuetify (UI framework)
