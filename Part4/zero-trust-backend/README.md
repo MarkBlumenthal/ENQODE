@@ -9,9 +9,7 @@ This is a backend service built using Node.js and Express to collect and store Z
 
 ## Setup Instructions
 
-1. Clone the repository or download the project files:
-
-navigat to the folder cd Part4 - cd zero-trust-backend
+1. navigat to the folder cd Part4 - cd zero-trust-backend
 
 Install the necessary dependencies:
 npm install
@@ -23,11 +21,9 @@ The server will start at http://localhost:3000.
 
 
 # Testing in postman
-API Endpoints and testing in postman
-1. Submit Zero-Trust Score Data
-Endpoint: POST /submit
-Description: Submits a Zero-Trust Score entry and stores it in the backend (JSON file).
-Request Body (JSON):
+
+1. Description: Submits a Zero-Trust Score entry and stores it in the backend (JSON file).
+Request Body raw(JSON):
 URL: http://localhost:3000/submit
 Post
 
@@ -42,14 +38,16 @@ Copy code
   "securityHeadersImplemented": ["X-XSS-Protection", "X-Frame-Options"],
   "openPortsDetected": 12
 }
-Responses:
-201 Created: If the data is successfully submitted. (you should see a zeroTrustData.json file created in your project)
-409 Conflict: If duplicate data is submitted.
 
-2. Retrieve Stored Zero-Trust Data
-Endpoint: GET /data
-Description: Retrieves all stored Zero-Trust Score entries.
-Response Body (JSON):
+
+Responses:
+201 Created: If the data is successfully submitted. (you should see a zeroTrustData.json file created in your project, this is saved and can be used for later)
+409 Conflict: If duplicate data is submitted.(A second file containing the same data will not be created)
+
+
+
+2. Description: Retrieves all stored Zero-Trust Score entries.
+Response Body raw(JSON):
 json
 URL: http://localhost:3000/data
 GET
