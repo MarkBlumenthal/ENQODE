@@ -29,12 +29,12 @@ Start the Server: Run the following command to start the API server on localhost
 node scanner.js
 you should see in your terminal: Server running on http://localhost:3000
 
-Testing with Postman:
+# Testing with Postman:
 
 Open Postman and set up a GET request to http://localhost:3000/checkBreach.
 Add a query parameter:
 Key: identifier
-Value: the website you wish to check (e.g., example@example.com).
+Value: the website you wish to check (e.g., facebook.com).
 Click Send to see the response.
 Example Response
 json
@@ -58,12 +58,12 @@ json
 
 
 
-Testing with nslookup with Postman:
+# Testing with nslookup with Postman:
 
 Open Postman and set up a GET request to http://localhost:3000/nslookup.
 Add a query parameter:
 Key: domain
-Value: the website you wish to check (e.g., example@example.com).
+Value: the website you wish to check (e.g., facebook.com).
 Click Send to see the response.
 Example Response
 json
