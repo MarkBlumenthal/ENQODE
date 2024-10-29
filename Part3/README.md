@@ -8,7 +8,7 @@ This project demonstrates a simple Zero-Trust Score widget built using **Vue.js 
 - The risk category based on the Zero-Trust Score.
 - A color chart explaining what each bar color represents (e.g., red for low scores, green for high scores).
 
-## How to Run the Project
+## How to Run the Project ##
 
 Follow these steps to set up and run the project:
 
